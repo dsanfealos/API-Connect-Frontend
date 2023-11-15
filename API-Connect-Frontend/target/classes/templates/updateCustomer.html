@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Customer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="container">
+
+<!--    Update Customer-->
+<h4>Create a new Customer</h4>
+<!--Show Id-->
+<label for="idShowCust">Id</label>
+<input class="form-control" id="idShowCust" disabled="disabled">
+<!--Inputs-->
+<form id="saveCustomer">
+  <!--Id-->
+  <div class ="form-group">
+    <label for="idCust" hidden="hidden">Id</label>
+    <input class="form-control" id="idCust" name="id" hidden="hidden">
+  </div>
+  <div class ="form-group">
+    <!--Name-->
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name = "name" required>
+  </div>
+  <div class="form-group">
+    <!--Genre-->
+    <label for="genre">Genre:</label>
+    <input type="text" class="form-control" id="genre" name="genre" required>
+  </div>
+  <div class="form-group">
+    <!--NumP-->
+    <label for="num_purchases">Nº Purchases:</label>
+    <input type="text" class="form-control" id="num_purchases" name="num_purchases" >
+  </div>
+  <button type ="submit" class="btn btn-primary">Save</button>
+  <a class="btn btn-secondary" href="http://localhost:8080">Go Back</a>
+</form>
+
+<script th:src="@{/js/update-script.js}"></script>
+</body>
+</html>
